@@ -1,0 +1,29 @@
+export var TerminalEventsEnum;
+(function (TerminalEventsEnum) {
+    TerminalEventsEnum["Loaded"] = "terminalLoaded";
+    TerminalEventsEnum["DiscoveredReaders"] = "terminalDiscoveredReaders";
+    TerminalEventsEnum["DiscoveringReaders"] = "terminalDiscoveringReaders";
+    TerminalEventsEnum["CancelDiscoveredReaders"] = "terminalCancelDiscoveredReaders";
+    TerminalEventsEnum["ConnectedReader"] = "terminalConnectedReader";
+    TerminalEventsEnum["DisconnectedReader"] = "terminalDisconnectedReader";
+    TerminalEventsEnum["ConnectionStatusChange"] = "terminalConnectionStatusChange";
+    TerminalEventsEnum["UnexpectedReaderDisconnect"] = "terminalUnexpectedReaderDisconnect";
+    TerminalEventsEnum["ConfirmedPaymentIntent"] = "terminalConfirmedPaymentIntent";
+    TerminalEventsEnum["CollectedPaymentIntent"] = "terminalCollectedPaymentIntent";
+    TerminalEventsEnum["Canceled"] = "terminalCanceled";
+    TerminalEventsEnum["Failed"] = "terminalFailed";
+    TerminalEventsEnum["RequestedConnectionToken"] = "terminalRequestedConnectionToken";
+    TerminalEventsEnum["ReportAvailableUpdate"] = "terminalReportAvailableUpdate";
+    TerminalEventsEnum["StartInstallingUpdate"] = "terminalStartInstallingUpdate";
+    TerminalEventsEnum["ReaderSoftwareUpdateProgress"] = "terminalReaderSoftwareUpdateProgress";
+    TerminalEventsEnum["FinishInstallingUpdate"] = "terminalFinishInstallingUpdate";
+    TerminalEventsEnum["BatteryLevel"] = "terminalBatteryLevel";
+    TerminalEventsEnum["ReaderEvent"] = "terminalReaderEvent";
+    TerminalEventsEnum["RequestDisplayMessage"] = "terminalRequestDisplayMessage";
+    TerminalEventsEnum["RequestReaderInput"] = "terminalRequestReaderInput";
+    TerminalEventsEnum["PaymentStatusChange"] = "terminalPaymentStatusChange";
+    TerminalEventsEnum["ReaderReconnectStarted"] = "terminalReaderReconnectStarted";
+    TerminalEventsEnum["ReaderReconnectSucceeded"] = "terminalReaderReconnectSucceeded";
+    TerminalEventsEnum["ReaderReconnectFailed"] = "terminalReaderReconnectFailed";
+})(TerminalEventsEnum || (TerminalEventsEnum = {}));
+//# sourceMappingURL=events.enum.js.map

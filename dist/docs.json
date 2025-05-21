@@ -1,0 +1,1769 @@
+{
+  "api": {
+    "name": "StripeTerminalPlugin",
+    "slug": "stripeterminalplugin",
+    "docs": "",
+    "tags": [],
+    "extends": [],
+    "methods": [
+      {
+        "name": "initialize",
+        "signature": "(options: { tokenProviderEndpoint?: string; isTest: boolean; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ tokenProviderEndpoint?: string | undefined; isTest: boolean; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "initialize"
+      },
+      {
+        "name": "discoverReaders",
+        "signature": "(options: { type: TerminalConnectTypes; locationId?: string; }) => Promise<{ readers: ReaderInterface[]; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ type: TerminalConnectTypes; locationId?: string | undefined; }"
+          }
+        ],
+        "returns": "Promise<{ readers: ReaderInterface[]; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ReaderInterface",
+          "TerminalConnectTypes"
+        ],
+        "slug": "discoverreaders"
+      },
+      {
+        "name": "setConnectionToken",
+        "signature": "(options: { token: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ token: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "setconnectiontoken"
+      },
+      {
+        "name": "setSimulatorConfiguration",
+        "signature": "(options: { update?: SimulateReaderUpdate; simulatedCard?: SimulatedCardType; simulatedTipAmount?: number; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ update?: SimulateReaderUpdate | undefined; simulatedCard?: SimulatedCardType | undefined; simulatedTipAmount?: number | undefined; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.models/-simulator-configuration/index.html)",
+        "complexTypes": [
+          "SimulateReaderUpdate",
+          "SimulatedCardType"
+        ],
+        "slug": "setsimulatorconfiguration"
+      },
+      {
+        "name": "connectReader",
+        "signature": "(options: { reader: ReaderInterface; autoReconnectOnUnexpectedDisconnect?: boolean; merchantDisplayName?: string; onBehalfOf?: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ reader: ReaderInterface; autoReconnectOnUnexpectedDisconnect?: boolean | undefined; merchantDisplayName?: string | undefined; onBehalfOf?: string | undefined; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options.autoReconnectOnUnexpectedDisconnect If true, the SDK will automatically attempt to reconnect to the reader. default is false."
+          }
+        ],
+        "docs": "",
+        "complexTypes": [
+          "ReaderInterface"
+        ],
+        "slug": "connectreader"
+      },
+      {
+        "name": "getConnectedReader",
+        "signature": "() => Promise<{ reader: ReaderInterface | null; }>",
+        "parameters": [],
+        "returns": "Promise<{ reader: ReaderInterface | null; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ReaderInterface"
+        ],
+        "slug": "getconnectedreader"
+      },
+      {
+        "name": "disconnectReader",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "disconnectreader"
+      },
+      {
+        "name": "cancelDiscoverReaders",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "canceldiscoverreaders"
+      },
+      {
+        "name": "collectPaymentMethod",
+        "signature": "(options: { paymentIntent: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ paymentIntent: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "collectpaymentmethod"
+      },
+      {
+        "name": "cancelCollectPaymentMethod",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "cancelcollectpaymentmethod"
+      },
+      {
+        "name": "confirmPaymentIntent",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "confirmpaymentintent"
+      },
+      {
+        "name": "installAvailableUpdate",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "installavailableupdate"
+      },
+      {
+        "name": "cancelInstallUpdate",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "cancelinstallupdate"
+      },
+      {
+        "name": "setReaderDisplay",
+        "signature": "(options: Cart) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "Cart"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "Cart"
+        ],
+        "slug": "setreaderdisplay"
+      },
+      {
+        "name": "clearReaderDisplay",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "clearreaderdisplay"
+      },
+      {
+        "name": "rebootReader",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "rebootreader"
+      },
+      {
+        "name": "cancelReaderReconnection",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "cancelreaderreconnection"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.Loaded, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.Loaded"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumloaded-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.RequestedConnectionToken, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.RequestedConnectionToken"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumrequestedconnectiontoken-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.DiscoveredReaders, listenerFunc: ({ readers }: { readers: ReaderInterface[]; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.DiscoveredReaders"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ readers }: { readers: ReaderInterface[]; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumdiscoveredreaders-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ConnectedReader, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ConnectedReader"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumconnectedreader-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.DisconnectedReader, listenerFunc: ({ reason }: { reason?: DisconnectReason | undefined; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.DisconnectedReader"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ reason }: { reason?: DisconnectReason | undefined; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "Emitted when the reader is disconnected, either in response to [`disconnectReader()`](#disconnectreader)\nor some connection error.\n\nFor all reader types, this is emitted in response to [`disconnectReader()`](#disconnectreader)\nwithout a `reason` property.\n\nFor Bluetooth and USB readers, this is emitted with a `reason` property when the reader disconnects.\n\n**Note:** For Bluetooth and USB readers, when you call [`disconnectReader()`](#disconnectreader), this event\nwill be emitted twice: one without a `reason` in acknowledgement of your call, and again with a `reason` when the reader\nfinishes disconnecting.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "DisconnectReason"
+        ],
+        "slug": "addlistenerterminaleventsenumdisconnectedreader-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ConnectionStatusChange, listenerFunc: ({ status }: { status: ConnectionStatus; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ConnectionStatusChange"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ status }: { status: ConnectionStatus; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "Emitted when the Terminal's connection status changed.\n\nNote: You should *not* use this method to detect when a reader unexpectedly disconnects from your app,\nas it cannot be used to accurately distinguish between expected and unexpected disconnect events.\n\nTo detect unexpected disconnects (e.g. to automatically notify your user), you should instead use\nthe UnexpectedReaderDisconnect event.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-terminal-listener/on-connection-status-change.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ConnectionStatus"
+        ],
+        "slug": "addlistenerterminaleventsenumconnectionstatuschange-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.UnexpectedReaderDisconnect, listenerFunc: ({ reader }: { reader: ReaderInterface; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.UnexpectedReaderDisconnect"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ reader }: { reader: ReaderInterface; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "The Terminal disconnected unexpectedly from the reader.\n\nIn your implementation of this method, you may want to notify your user that the reader disconnected.\nYou may also call [`discoverReaders()`](#discoverreaders) to begin scanning for readers, and attempt\nto automatically reconnect to the disconnected reader. Be sure to either set a timeout or make it\npossible to cancel calls to `discoverReaders()`\n\nWhen connected to a Bluetooth or USB reader, you can get more information about the disconnect by\nimplementing the DisconnectedReader event.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-terminal-listener/on-unexpected-reader-disconnect.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumunexpectedreaderdisconnect-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ConfirmedPaymentIntent, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ConfirmedPaymentIntent"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumconfirmedpaymentintent-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.CollectedPaymentIntent, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.CollectedPaymentIntent"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumcollectedpaymentintent-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.Canceled, listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.Canceled"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "Emitted when [`cancelCollectPaymentMethod()`](#cancelcollectpaymentmethod) is called and succeeds.\nThe Promise returned by `cancelCollectPaymentMethod()` will also be resolved.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumcanceled-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.Failed, listenerFunc: (info: { message: string; code?: string; declineCode?: string; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.Failed"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(info: { message: string; code?: string | undefined; declineCode?: string | undefined; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "Emitted when either [`collectPaymentMethod()`](#collectpaymentmethod) or [`confirmPaymentIntent()`](#confirmpaymentintent)\nfails. The Promise returned by the relevant call will also be rejected.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumfailed-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReportAvailableUpdate, listenerFunc: ({ update }: { update: ReaderSoftwareUpdateInterface; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReportAvailableUpdate"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ update }: { update: ReaderSoftwareUpdateInterface; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "Emitted when a software update is available for the connected reader.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderSoftwareUpdateInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumreportavailableupdate-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.StartInstallingUpdate, listenerFunc: ({ update }: { update: ReaderSoftwareUpdateInterface; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.StartInstallingUpdate"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ update }: { update: ReaderSoftwareUpdateInterface; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\nEmitted when the connected reader begins installing a software update.\nIf a mandatory software update is available when a reader first connects, that update is\nautomatically installed. The update will be installed before ConnectedReader is emitted and\nbefore the Promise returned by [`connectReader()`](#connectreader) resolves.\nIn this case, you will receive this sequence of events:\n\n1. StartInstallingUpdate\n2. ReaderSoftwareUpdateProgress (repeatedly)\n3. FinishInstallingUpdates\n4. ConnectedReader\n5. `connectReader()` Promise resolves\n\nYour app should show UI to the user indiciating that a software update is being installed\nto explain why connecting is taking longer than usual.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-start-installing-update.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderSoftwareUpdateInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumstartinstallingupdate-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReaderSoftwareUpdateProgress, listenerFunc: ({ progress }: { progress: number; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReaderSoftwareUpdateProgress"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ progress }: { progress: number; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\nEmitted periodically while reader software is updating to inform of the installation progress.\n`progress` is a float between 0 and 1.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-report-reader-software-update-progress.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum"
+        ],
+        "slug": "addlistenerterminaleventsenumreadersoftwareupdateprogress-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.FinishInstallingUpdate, listenerFunc: (args: { update: ReaderSoftwareUpdateInterface; } | { error: string; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.FinishInstallingUpdate"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(args: { update: ReaderSoftwareUpdateInterface; } | { error: string; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-finish-installing-update.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderSoftwareUpdateInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumfinishinstallingupdate-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.BatteryLevel, listenerFunc: ({ level, charging, status }: { level: number; charging: boolean; status: BatteryStatus; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.BatteryLevel"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ level, charging, status }: { level: number; charging: boolean; status: BatteryStatus; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\nEmitted upon connection and every 10 minutes.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-battery-level-update.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "BatteryStatus"
+        ],
+        "slug": "addlistenerterminaleventsenumbatterylevel-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReaderEvent, listenerFunc: ({ event }: { event: ReaderEvent; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReaderEvent"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ event }: { event: ReaderEvent; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listenable/on-report-reader-event.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderEvent"
+        ],
+        "slug": "addlistenerterminaleventsenumreaderevent-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.RequestDisplayMessage, listenerFunc: ({ messageType, message }: { messageType: ReaderDisplayMessage; message: string; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.RequestDisplayMessage"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ messageType, message }: { messageType: ReaderDisplayMessage; message: string; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\nEmitted when the Terminal requests that a message be displayed in your app.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-request-reader-display-message.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderDisplayMessage"
+        ],
+        "slug": "addlistenerterminaleventsenumrequestdisplaymessage-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.RequestReaderInput, listenerFunc: ({ options, message }: { options: ReaderInputOption[]; message: string; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.RequestReaderInput"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ options, message }: { options: ReaderInputOption[]; message: string; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "**Only applicable to Bluetooth and USB readers.**\n\nEmitted when the reader begins waiting for input. Your app should prompt the customer\nto present a source using one of the given input options. If the reader emits a message,\nthe RequestDisplayMessage event will be emitted.\n\n[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-reader-listener/on-request-reader-input.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInputOption"
+        ],
+        "slug": "addlistenerterminaleventsenumrequestreaderinput-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.PaymentStatusChange, listenerFunc: ({ status }: { status: PaymentStatus; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.PaymentStatusChange"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ status }: { status: PaymentStatus; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "[*Stripe docs reference*](https://stripe.dev/stripe-terminal-android/external/com.stripe.stripeterminal.external.callable/-terminal-listener/on-payment-status-change.html)",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "PaymentStatus"
+        ],
+        "slug": "addlistenerterminaleventsenumpaymentstatuschange-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReaderReconnectStarted, listenerFunc: ({ reader, reason }: { reader: ReaderInterface; reason: string; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReaderReconnectStarted"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ reader, reason }: { reader: ReaderInterface; reason: string; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumreaderreconnectstarted-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReaderReconnectSucceeded, listenerFunc: ({ reader }: { reader: ReaderInterface; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReaderReconnectSucceeded"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ reader }: { reader: ReaderInterface; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumreaderreconnectsucceeded-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: TerminalEventsEnum.ReaderReconnectFailed, listenerFunc: ({ reader }: { reader: ReaderInterface; }) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "TerminalEventsEnum.ReaderReconnectFailed"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "({ reader }: { reader: ReaderInterface; }) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "TerminalEventsEnum",
+          "ReaderInterface"
+        ],
+        "slug": "addlistenerterminaleventsenumreaderreconnectfailed-"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "extends": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "BatteryStatus",
+      "slug": "batterystatus",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Critical",
+          "value": "'CRITICAL'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Low",
+          "value": "'LOW'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Nominal",
+          "value": "'NOMINAL'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "UpdateTimeEstimate",
+      "slug": "updatetimeestimate",
+      "members": [
+        {
+          "name": "LessThanOneMinute",
+          "value": "'LESS_THAN_ONE_MINUTE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "OneToTwoMinutes",
+          "value": "'ONE_TO_TWO_MINUTES'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "TwoToFiveMinutes",
+          "value": "'TWO_TO_FIVE_MINUTES'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "FiveToFifteenMinutes",
+          "value": "'FIVE_TO_FIFTEEN_MINUTES'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "NetworkStatus",
+      "slug": "networkstatus",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Online",
+          "value": "'ONLINE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Offline",
+          "value": "'OFFLINE'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "LocationStatus",
+      "slug": "locationstatus",
+      "members": [
+        {
+          "name": "NotSet",
+          "value": "'NOT_SET'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Set",
+          "value": "'SET'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "DeviceType",
+      "slug": "devicetype",
+      "members": [
+        {
+          "name": "tapToPayDevice",
+          "value": "'tapToPayDevice'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "wisePad3s",
+          "value": "'wisePad3s'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "appleBuiltIn",
+          "value": "'appleBuiltIn'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "chipper1X",
+          "value": "'chipper1X'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "chipper2X",
+          "value": "'chipper2X'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "etna",
+          "value": "'etna'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "stripeM2",
+          "value": "'stripeM2'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "stripeS700",
+          "value": "'stripeS700'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "stripeS700DevKit",
+          "value": "'stripeS700Devkit'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "verifoneP400",
+          "value": "'verifoneP400'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "wiseCube",
+          "value": "'wiseCube'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "wisePad3",
+          "value": "'wisePad3'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "wisePosE",
+          "value": "'wisePosE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "wisePosEDevKit",
+          "value": "'wisePosEDevkit'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "unknown",
+          "value": "'unknown'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "TerminalConnectTypes",
+      "slug": "terminalconnecttypes",
+      "members": [
+        {
+          "name": "Simulated",
+          "value": "'simulated'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Internet",
+          "value": "'internet'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Bluetooth",
+          "value": "'bluetooth'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Usb",
+          "value": "'usb'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "TapToPay",
+          "value": "'tap-to-pay'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "HandOff",
+          "value": "'hand-off'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "SimulateReaderUpdate",
+      "slug": "simulatereaderupdate",
+      "members": [
+        {
+          "name": "UpdateAvailable",
+          "value": "'UPDATE_AVAILABLE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "None",
+          "value": "'NONE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Required",
+          "value": "'REQUIRED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Random",
+          "value": "'RANDOM'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LowBattery",
+          "value": "'LOW_BATTERY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LowBatterySucceedConnect",
+          "value": "'LOW_BATTERY_SUCCEED_CONNECT'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "SimulatedCardType",
+      "slug": "simulatedcardtype",
+      "members": [
+        {
+          "name": "Visa",
+          "value": "'VISA'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "VisaDebit",
+          "value": "'VISA_DEBIT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Mastercard",
+          "value": "'MASTERCARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "MastercardDebit",
+          "value": "'MASTERCARD_DEBIT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "MastercardPrepaid",
+          "value": "'MASTERCARD_PREPAID'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Amex",
+          "value": "'AMEX'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Amex2",
+          "value": "'AMEX_2'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Discover",
+          "value": "'DISCOVER'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Discover2",
+          "value": "'DISCOVER_2'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DinersClub",
+          "value": "'DINERS'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DinersClulb14Digits",
+          "value": "'DINERS_14_DIGITS'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "JCB",
+          "value": "'JCB'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "UnionPay",
+          "value": "'UNION_PAY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Interac",
+          "value": "'INTERAC'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "EftposAustraliaDebit",
+          "value": "'EFTPOS_AU_DEBIT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "VisaUsCommonDebit",
+          "value": "'VISA_US_COMMON_DEBIT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclined",
+          "value": "'CHARGE_DECLINED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclinedInsufficientFunds",
+          "value": "'CHARGE_DECLINED_INSUFFICIENT_FUNDS'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclinedLostCard",
+          "value": "'CHARGE_DECLINED_LOST_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclinedStolenCard",
+          "value": "'CHARGE_DECLINED_STOLEN_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclinedExpiredCard",
+          "value": "'CHARGE_DECLINED_EXPIRED_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ChargeDeclinedProcessingError",
+          "value": "'CHARGE_DECLINED_PROCESSING_ERROR'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "EftposAustraliaVisaDebit",
+          "value": "'EFTPOS_AU_VISA_DEBIT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "EftposAustraliaMastercardDebit",
+          "value": "'EFTPOS_AU_DEBIT_MASTERCARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "OfflinePinCVM",
+          "value": "'OFFLINE_PIN_CVM'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "OfflinePinSCARetry",
+          "value": "'OFFLINE_PIN_SCA_RETRY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "OnlinePinCVM",
+          "value": "'ONLINE_PIN_CVM'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "OnlinePinSCARetry",
+          "value": "'ONLINE_PIN_SCA_RETRY'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "TerminalEventsEnum",
+      "slug": "terminaleventsenum",
+      "members": [
+        {
+          "name": "Loaded",
+          "value": "'terminalLoaded'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DiscoveredReaders",
+          "value": "'terminalDiscoveredReaders'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DiscoveringReaders",
+          "value": "'terminalDiscoveringReaders'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CancelDiscoveredReaders",
+          "value": "'terminalCancelDiscoveredReaders'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ConnectedReader",
+          "value": "'terminalConnectedReader'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DisconnectedReader",
+          "value": "'terminalDisconnectedReader'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ConnectionStatusChange",
+          "value": "'terminalConnectionStatusChange'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "UnexpectedReaderDisconnect",
+          "value": "'terminalUnexpectedReaderDisconnect'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ConfirmedPaymentIntent",
+          "value": "'terminalConfirmedPaymentIntent'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CollectedPaymentIntent",
+          "value": "'terminalCollectedPaymentIntent'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Canceled",
+          "value": "'terminalCanceled'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Failed",
+          "value": "'terminalFailed'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RequestedConnectionToken",
+          "value": "'terminalRequestedConnectionToken'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReportAvailableUpdate",
+          "value": "'terminalReportAvailableUpdate'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "StartInstallingUpdate",
+          "value": "'terminalStartInstallingUpdate'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReaderSoftwareUpdateProgress",
+          "value": "'terminalReaderSoftwareUpdateProgress'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "FinishInstallingUpdate",
+          "value": "'terminalFinishInstallingUpdate'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "BatteryLevel",
+          "value": "'terminalBatteryLevel'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReaderEvent",
+          "value": "'terminalReaderEvent'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RequestDisplayMessage",
+          "value": "'terminalRequestDisplayMessage'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RequestReaderInput",
+          "value": "'terminalRequestReaderInput'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "PaymentStatusChange",
+          "value": "'terminalPaymentStatusChange'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReaderReconnectStarted",
+          "value": "'terminalReaderReconnectStarted'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReaderReconnectSucceeded",
+          "value": "'terminalReaderReconnectSucceeded'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ReaderReconnectFailed",
+          "value": "'terminalReaderReconnectFailed'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "DisconnectReason",
+      "slug": "disconnectreason",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DisconnectRequested",
+          "value": "'DISCONNECT_REQUESTED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RebootRequested",
+          "value": "'REBOOT_REQUESTED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SecurityReboot",
+          "value": "'SECURITY_REBOOT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CriticallyLowBattery",
+          "value": "'CRITICALLY_LOW_BATTERY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "PoweredOff",
+          "value": "'POWERED_OFF'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "BluetoothDisabled",
+          "value": "'BLUETOOTH_DISABLED'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "ConnectionStatus",
+      "slug": "connectionstatus",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "NotConnected",
+          "value": "'NOT_CONNECTED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Connecting",
+          "value": "'CONNECTING'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Connected",
+          "value": "'CONNECTED'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "ReaderEvent",
+      "slug": "readerevent",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CardInserted",
+          "value": "'CARD_INSERTED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CardRemoved",
+          "value": "'CARD_REMOVED'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "ReaderDisplayMessage",
+      "slug": "readerdisplaymessage",
+      "members": [
+        {
+          "name": "CheckMobileDevice",
+          "value": "'CHECK_MOBILE_DEVICE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RetryCard",
+          "value": "'RETRY_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "InsertCard",
+          "value": "'INSERT_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "InsertOrSwipeCard",
+          "value": "'INSERT_OR_SWIPE_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SwipeCard",
+          "value": "'SWIPE_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RemoveCard",
+          "value": "'REMOVE_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "MultipleContactlessCardsDetected",
+          "value": "'MULTIPLE_CONTACTLESS_CARDS_DETECTED'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "TryAnotherReadMethod",
+          "value": "'TRY_ANOTHER_READ_METHOD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "TryAnotherCard",
+          "value": "'TRY_ANOTHER_CARD'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CardRemovedTooEarly",
+          "value": "'CARD_REMOVED_TOO_EARLY'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "ReaderInputOption",
+      "slug": "readerinputoption",
+      "members": [
+        {
+          "name": "None",
+          "value": "'NONE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Insert",
+          "value": "'INSERT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Swipe",
+          "value": "'SWIPE'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Tap",
+          "value": "'TAP'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ManualEntry",
+          "value": "'MANUAL_ENTRY'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "PaymentStatus",
+      "slug": "paymentstatus",
+      "members": [
+        {
+          "name": "Unknown",
+          "value": "'UNKNOWN'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "NotReady",
+          "value": "'NOT_READY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Ready",
+          "value": "'READY'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "WaitingForInput",
+          "value": "'WAITING_FOR_INPUT'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Processing",
+          "value": "'PROCESSING'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "ReaderInterface",
+      "slug": "readerinterface",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  /**\n   * The unique serial number is primary identifier inner plugin.\n   */\n  serialNumber: string;\n\n  label: string;\n  batteryLevel: number;\n  batteryStatus: BatteryStatus;\n  simulated: boolean;\n  id: number;\n  availableUpdate: ReaderSoftwareUpdateInterface | undefined;\n  locationId: string;\n  ipAddress: string;\n  status: NetworkStatus;\n  location: LocationInterface | undefined;\n  locationStatus: LocationStatus;\n  deviceType: DeviceType;\n  deviceSoftwareVersion: string | null;\n\n  /**\n   * iOS Only properties. These properties are not available on Android.\n   */\n  isCharging: number;\n\n  /**\n   * Android Only properties. These properties are not available on iOS.\n   */\n  baseUrl: string;\n  bootloaderVersion: string;\n  configVersion: string;\n  emvKeyProfileId: string;\n  firmwareVersion: string;\n  hardwareVersion: string;\n  macKeyProfileId: string;\n  pinKeyProfileId: string;\n  trackKeyProfileId: string;\n  settingsVersion: string;\n  pinKeysetId: string;\n}",
+          "complexTypes": [
+            "BatteryStatus",
+            "ReaderSoftwareUpdateInterface",
+            "NetworkStatus",
+            "LocationInterface",
+            "LocationStatus",
+            "DeviceType"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReaderSoftwareUpdateInterface",
+      "slug": "readersoftwareupdateinterface",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  deviceSoftwareVersion: string;\n  estimatedUpdateTime: UpdateTimeEstimate;\n  requiredAt: number;\n}",
+          "complexTypes": [
+            "UpdateTimeEstimate"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LocationInterface",
+      "slug": "locationinterface",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  id: string;\n  displayName: string;\n  address: {\n    city: string;\n    country: string;\n    postalCode: string;\n    line1: string;\n    line2: string;\n    state: string;\n  };\n  ipAddress: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "DeviceType",
+      "slug": "devicetype",
+      "docs": "",
+      "types": [
+        {
+          "text": "Stripe.Terminal.Reader.DeviceType",
+          "complexTypes": [
+            "Stripe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "slug": "cart",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  currency: string;\n  tax: number;\n  total: number;\n  lineItems: CartLineItem[];\n}",
+          "complexTypes": [
+            "CartLineItem"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CartLineItem",
+      "slug": "cartlineitem",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  displayName: string;\n  quantity: number;\n  amount: number;\n}",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
