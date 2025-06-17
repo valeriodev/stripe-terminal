@@ -75,4 +75,5 @@ dependencies {
     implementation "com.stripe:stripeterminal-handoffclient:$stripeterminalHandoffClientVersion"
     implementation "com.android.volley:volley:$volleyVersion"
     implementation "com.google.android.gms:play-services-wallet:$playServicesWalletVersion"
+    implementation 'com.google.code.gson:gson:2.10.1'
 }

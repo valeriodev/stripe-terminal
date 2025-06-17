@@ -51,6 +51,7 @@ import com.stripe.stripeterminal.external.models.SimulatedCard
 import com.stripe.stripeterminal.external.models.SimulatorConfiguration
 import com.stripe.stripeterminal.external.models.TerminalException
 import com.stripe.stripeterminal.log.LogLevel
+import com.google.gson.Gson
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.Objects
