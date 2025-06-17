@@ -751,28 +751,48 @@ class StripeTerminal(
     }
 
     private val confirmPaymentMethodCallback: PaymentIntentCallback =
-        object : PaymentIntentCallback {
-            override fun onSuccess(paymentIntent: PaymentIntent) {
-                notifyListeners(TerminalEnumEvent.ConfirmedPaymentIntent.webEventName, JSObject().put("paymentIntent", paymentIntent))
-                paymentIntentInstance = null
-                confirmPaymentIntentCall!!.resolve()
+    object : PaymentIntentCallback {
+        override fun onSuccess(paymentIntent: PaymentIntent) {
+            val paymentIntentJsonString = paymentIntent.toString()
+
+            val payload = try {
+                // Tenta di capire se è già un JSON
+                val trimmed = paymentIntentJsonString.trim()
+                if ((trimmed.startsWith("{") && trimmed.endsWith("}")) ||
+                    (trimmed.startsWith("[") && trimmed.endsWith("]"))) {
+                    // Probabilmente è già JSON valido
+                    JSObject().put("paymentIntent", JSONObject(trimmed))
+                } else {
+                    // Altrimenti, lo serializziamo con Gson
+                    val json = gson.toJson(paymentIntent)
+                    JSObject().put("paymentIntent", JSONObject(json))
+                }
+            } catch (e: Exception) {
+                // In caso di errore, fallback al toString()
+                JSObject().put("paymentIntent", paymentIntentJsonString)
             }
 
-            override fun onFailure(e: TerminalException) {
-                notifyListeners(TerminalEnumEvent.Failed.webEventName, emptyObject)
-                val returnObject = JSObject()
-                returnObject.put("message", e.localizedMessage)
-                if (e.apiError != null) {
-                    returnObject.put("code", e.apiError!!.code)
-                    returnObject.put("declineCode", e.apiError!!.declineCode)
-                }
-                confirmPaymentIntentCall!!.reject(
-                    e.localizedMessage,
-                    null as String?,
-                    returnObject
-                )
-            }
+            notifyListeners(TerminalEnumEvent.ConfirmedPaymentIntent.webEventName, payload)
+            paymentIntentInstance = null
+            confirmPaymentIntentCall!!.resolve()
         }
+
+        override fun onFailure(e: TerminalException) {
+            notifyListeners(TerminalEnumEvent.Failed.webEventName, JSObject())
+
+            val returnObject = JSObject()
+            returnObject.put("message", e.localizedMessage)
+            e.apiError?.let {
+                returnObject.put("code", it.code)
+                returnObject.put("declineCode", it.declineCode)
+            }
+            confirmPaymentIntentCall!!.reject(
+                e.localizedMessage,
+                null,
+                returnObject
+            )
+        }
+    }
 
     init {
         this.contextSupplier = contextSupplier

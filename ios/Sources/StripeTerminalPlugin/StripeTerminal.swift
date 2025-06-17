@@ -242,7 +242,9 @@ public class StripeTerminal: NSObject, DiscoveryDelegate, TerminalDelegate, Read
                 } else if let confirmedIntent = confirmResult {
                     print("PaymentIntent confirmed: \(confirmedIntent)")
                     //self.plugin?.notifyListeners(TerminalEvents.ConfirmedPaymentIntent.rawValue, data: [:])
-                    self.plugin?.notifyListeners(TerminalEvents.ConfirmedPaymentIntent.rawValue, data: paymentIntent)
+                    self.plugin?.notifyListeners(TerminalEvents.ConfirmedPaymentIntent.rawValue, data: [
+                        "paymentIntent": TerminalMappers.mapFromPaymentIntent(paymentIntent)
+                    ])
                     call.resolve()
                 }
             }

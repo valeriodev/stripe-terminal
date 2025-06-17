@@ -471,6 +471,7 @@ var capacitorStripe = (function (exports, core, terminalJs) {
             }
             const processResult = await ((_a = this.stripeTerminal) === null || _a === void 0 ? void 0 : _a.processPayment(this.cachedPaymentIntent));
             if (processResult.error) {
+                this.notifyListeners(exports.TerminalEventsEnum.Error, processResult);
                 throw new Error(processResult.error.message);
             }
             console.log("Confirm payment", processResult);
