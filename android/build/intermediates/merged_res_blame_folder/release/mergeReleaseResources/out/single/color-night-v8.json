@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/color-night-v8/material_timepicker_button_stroke.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/color-night-v8/material_timepicker_button_stroke.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/color-night-v8/material_timepicker_clockface.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/color-night-v8/material_timepicker_clockface.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/color-night-v8/material_timepicker_modebutton_tint.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/color-night-v8/material_timepicker_modebutton_tint.xml"
+    }
+]

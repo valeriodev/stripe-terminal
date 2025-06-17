@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Contains all tap zone views for each state -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tapZoneContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="0dp"
+    android:elevation="7dp" >
+
+    <!-- Tap zone -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tapZoneBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:elevation="8dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="0dp" >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/cots_emv_symbol_description"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5"
+            app:srcCompat="@drawable/ic_nfc_tap_here"
+            app:tint="@android:color/white" />
+
+        <View
+            android:id="@+id/tapZoneOutline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_tap_zone_primary"
+            android:alpha=".1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:outlineProvider="none" />
+
+        <View
+            android:id="@+id/tapZoneCircle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="@dimen/cots_tap_zone_to_outline_ratio"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_tap_zone_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Success zone -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/successBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:elevation="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="0dp" >
+
+        <ImageView
+            android:id="@+id/successCheckmark"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/cots_success_symbol_description"
+            android:elevation="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".25"
+            app:tint="@color/cots_background"
+            app:srcCompat="@drawable/ic_check" />
+
+        <View
+            android:id="@+id/successZoneCircle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:elevation="6dp"
+            android:outlineProvider="none" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Error zone -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/errorBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:clipChildren="false"
+        android:elevation="8dp"
+        android:clipToPadding="false" >
+
+        <ImageView
+            android:id="@+id/errorIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/cots_error_symbol_description"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".33"
+            app:srcCompat="@drawable/ic_warning" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_error_background"
+            android:alpha="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Reading zone -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/readingBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:elevation="8dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="0dp" >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/cots_emv_symbol_description"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5"
+            app:srcCompat="@drawable/ic_nfc_tap_here"
+            app:tint="@android:color/white" />
+
+        <View
+            android:id="@+id/readingOutline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_tap_zone_primary"
+            android:alpha=".1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:outlineProvider="none"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <View
+            android:id="@+id/readingCircle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="@dimen/cots_tap_zone_to_outline_ratio"
+            android:background="@drawable/ic_circle"
+            android:backgroundTint="@color/cots_tap_zone_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="7dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/tapPulse"
+        android:padding="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_circle"
+        android:backgroundTint="@color/cots_tap_zone_primary"
+        android:alpha=".3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleX="@dimen/cots_tap_zone_to_outline_ratio"
+        android:scaleY="@dimen/cots_tap_zone_to_outline_ratio"
+        android:outlineProvider="none" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

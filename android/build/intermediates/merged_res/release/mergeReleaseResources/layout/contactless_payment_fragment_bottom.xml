@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false">
+
+    <!-- Contains all tap zone views for each state -->
+    <!-- Using tools since we programmatically set either set either layout_constraintWidth_percent for portrait
+         or layout_constraintHeight_percent for landscape.
+         This is the only difference between the XML for layouts & layouts-land, so this avoids extra landscape files -->
+    <include
+        layout="@layout/contactless_payment_fragment_tap_zone_container"
+        android:id="@+id/tapZoneContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintVertical_bias=".75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling" />
+
+    <!-- Loading spinner -->
+    <include
+        android:id="@+id/loadingSpinnerInclude"
+        layout="@layout/contactless_payment_fragment_loading_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/tapZoneContainer"
+        app:layout_constraintBottom_toBottomOf="@id/tapZoneContainer"
+        app:layout_constraintLeft_toLeftOf="@id/tapZoneContainer"
+        app:layout_constraintRight_toRightOf="@id/tapZoneContainer"
+        tools:layout_constraintVertical_bias="@dimen/cots_default_tap_zone_vertical_position"
+        android:elevation="3dp"
+        tools:layout_constraintWidth_max="352dp"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:clipChildren="false" />
+
+    <!-- Tap zone state text -->
+    <TextView
+        android:id="@+id/tapZoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semi_bold"
+        android:gravity="center"
+        android:text="@string/cots_tap_behind"
+        android:textSize="@dimen/cots_tap_zone_text_size"
+        android:textColor="@color/cots_text_primary"
+        android:layout_marginTop="@dimen/cots_tap_zone_text_margin"
+        app:layout_constraintLeft_toLeftOf="@id/tapZoneContainer"
+        app:layout_constraintRight_toRightOf="@id/tapZoneContainer"
+        app:layout_constraintTop_toBottomOf="@id/tapZoneContainer" />
+
+    <!-- Cancel transaction button -->
+    <include
+        layout="@layout/contactless_payment_fragment_cancel_button"
+        android:id="@+id/cancelBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/transactionInclude"
+        android:layout_marginTop="@dimen/cots_large_margin" />
+
+    <include
+        android:id="@+id/transactionInclude"
+        layout="@layout/contactless_payment_total_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/cots_large_margin"
+        app:layout_constraintHeight_percent="@dimen/cots_total_height_scaling"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

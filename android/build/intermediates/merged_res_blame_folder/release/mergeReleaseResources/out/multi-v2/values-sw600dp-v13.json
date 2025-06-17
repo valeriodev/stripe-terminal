@@ -1,0 +1,120 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.getcapacitor.community.stripe.terminal-release-51:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/a29d92da12540b2a00df3564c465a31b/transformed/material-1.12.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
+                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
+                    },
+                    "to": {
+                        "startLines": "11,12,13,14,15,16,17,19,20,21,22,23",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "655,715,785,856,928,986,1044,1153,1217,1273,1332,1395",
+                        "endLines": "11,12,13,14,15,16,18,19,20,21,22,26",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "710,780,851,923,981,1039,1148,1212,1268,1327,1390,1562"
+                    }
+                },
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/e6352ff5be11ec020f90482adb911db7/transformed/stripeterminal-taptopay-4.3.0/res/values-sw600dp-v13/values.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "1",
+                        "startOffsets": "13",
+                        "endColumns": "40",
+                        "endOffsets": "52"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "43",
+                        "endOffsets": "94"
+                    }
+                },
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/94db740b2ffe5b129ee7bf994b4176ee/transformed/appcompat-1.7.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "99,168,237,307,381,457,516,587",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "163,232,302,376,452,511,582,650"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.getcapacitor.community.stripe.terminal-mergeReleaseResources-49:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/a29d92da12540b2a00df3564c465a31b/transformed/material-1.12.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
+                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
+                    },
+                    "to": {
+                        "startLines": "11,12,13,14,15,16,17,19,20,21,22,23",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "655,715,785,856,928,986,1044,1153,1217,1273,1332,1395",
+                        "endLines": "11,12,13,14,15,16,18,19,20,21,22,26",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "710,780,851,923,981,1039,1148,1212,1268,1327,1390,1562"
+                    }
+                },
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/e6352ff5be11ec020f90482adb911db7/transformed/stripeterminal-taptopay-4.3.0/res/values-sw600dp-v13/values.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "1",
+                        "startOffsets": "13",
+                        "endColumns": "40",
+                        "endOffsets": "52"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "43",
+                        "endOffsets": "94"
+                    }
+                },
+                {
+                    "source": "/Users/valerio/.gradle/caches/8.11.1/transforms/94db740b2ffe5b129ee7bf994b4176ee/transformed/appcompat-1.7.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "99,168,237,307,381,457,516,587",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "163,232,302,376,452,511,582,650"
+                    }
+                }
+            ]
+        }
+    ]
+}

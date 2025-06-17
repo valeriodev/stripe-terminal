@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cots_amex_logo_description">Logo ng American Express</string>
+    <string name="cots_arrow_down_description">Pababang arrow na nagpapahiwatig ng tap zone</string>
+    <string name="cots_arrow_up_description">Pataas na arrow na nagpapahiwatig ng tap zone</string>
+    <string name="cots_cancel_button_desc">Kanselahin ang transaksyon</string>
+    <string name="cots_card_not_supported">Hindi suportado ang kard</string>
+    <string name="cots_declined">Tinanggihan ang kard\nMangyaring gumamit ng ibang kard</string>
+    <string name="cots_eftpos_logo_description">EFTPOS logo</string>
+    <string name="cots_emv_symbol_description">EMV contactless symbol</string>
+    <string name="cots_error_symbol_description">Failure contactless symbol</string>
+    <string name="cots_irrecoverable_error">Error\nMangnyaring gumamit ng ibang kard</string>
+    <string name="cots_loading">Pinoproseso</string>
+    <string name="cots_mastercard_logo_description">Logo ng Mastercard</string>
+    <string name="cots_pin_prompt">Ilagay ang PIN</string>
+    <string name="cots_reader_not_active">Hindi aktibo ang reader</string>
+    <string name="cots_reader_pin_required">Kailangan ng PIN</string>
+    <string name="cots_reading">Hawakan ang kard</string>
+    <string name="cots_recoverable_error">Error\nSubukan muli</string>
+    <string name="cots_see_phone">Tingnan ang telepono at subukan muli</string>
+    <string name="cots_simulate_tap">I-tap para I-simulate ang Pagbabayad</string>
+    <string name="cots_success">Alisin ang kard</string>
+    <string name="cots_success_symbol_description">Checkmark contactless symbol</string>
+    <string name="cots_tap_above">I-tap sa itaas ng device</string>
+    <string name="cots_tap_behind">I-tap sa likod ng device</string>
+    <string name="cots_tap_below">I-tap sa ibaba ng device</string>
+    <string name="cots_tap_here">I-tap dito</string>
+    <string name="cots_total">Kabuuan</string>
+    <string name="cots_visa_logo_description">Logo ng Visa</string>
+    <string name="gpay_logo_description">Google Pay</string>
+    <string name="wallet_buy_button_place_holder">Bumili gamit ang Google</string>
+</resources>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/animator-v21/m3_appbar_state_list_animator.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/animator-v21/m3_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/animator-v21/design_appbar_state_list_animator.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/animator-v21/design_appbar_state_list_animator.xml"
+    }
+]

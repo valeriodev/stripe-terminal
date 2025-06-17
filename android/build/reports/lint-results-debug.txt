@@ -1,0 +1,81 @@
+/Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/java/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt:964: Error: Call requires API level 24, or core library desugaring (current min is 23): java.util.Collection#stream [NewApi]
+            .stream()
+             ~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/java/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt:965: Error: Call requires API level 24, or core library desugaring (current min is 23): java.util.stream.Stream#filter [NewApi]
+            .filter { device: Reader? -> serialNumber != null && serialNumber == device!!.serialNumber }
+             ~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/java/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt:966: Error: Call requires API level 24, or core library desugaring (current min is 23): java.util.stream.Stream#findFirst [NewApi]
+            .findFirst()
+             ~~~~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/java/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt:967: Error: Call requires API level 24, or core library desugaring (current min is 23): java.util.Optional#orElse [NewApi]
+            .orElse(null)
+             ~~~~~~
+
+   Explanation for issues of type "NewApi":
+   This check scans through all the Android API calls in the application and
+   warns about any calls that are not available on all versions targeted by
+   this application (according to its minimum SDK attribute in the manifest).
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+   If you are deliberately setting android: attributes in style definitions,
+   make sure you place this in a values-vNN folder in order to avoid running
+   into runtime conflicts on certain devices where manufacturers have added
+   custom attributes whose ids conflict with the new ones on later platforms.
+
+   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+   the element will only be inflated in an adequate context.
+
+/Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:3: Error: If you need access to FINE location, you must request both ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION [CoarseFineLocation]
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CoarseFineLocation":
+   If your app requires access to FINE location, on Android 12 and higher you
+   must now request both FINE and COARSE. Users will have the option to grant
+   only COARSE location. Ensure your app can work with just COARSE location.
+
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:21: Warning: A newer version of com.android.tools.build:gradle than 8.7.2 is available: 8.10.1. (There is also a newer version of 8.7.𝑥 available, if upgrading to 8.10.1 is difficult: 8.7.3) [AndroidGradlePluginVersion]
+        classpath 'com.android.tools.build:gradle:8.7.2'
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:66: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.7.1 [GradleDependency]
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:71: Warning: A newer version of org.jetbrains.kotlin:kotlin-stdlib than 2.1.0 is available: 2.1.10 [GradleDependency]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:73: Warning: A newer version of com.stripe:stripeterminal-core than 4.3.0 is available: 4.3.1 [GradleDependency]
+    implementation "com.stripe:stripeterminal-core:$stripeterminalCoreVersion"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:75: Warning: A newer version of com.stripe:stripeterminal-handoffclient than 4.3.0 is available: 4.3.1 [GradleDependency]
+    implementation "com.stripe:stripeterminal-handoffclient:$stripeterminalHandoffClientVersion"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/valerio/Flazio/Altro/stripe-terminal/android/build.gradle:77: Warning: A newer version of com.google.android.gms:play-services-wallet than 19.2.1 is available: 19.4.0 [GradleDependency]
+    implementation "com.google.android.gms:play-services-wallet:$playServicesWalletVersion"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+5 errors, 6 warnings

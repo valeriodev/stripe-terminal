@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.2" type="conditional_incidents">
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffffc00000" requiresApi="ffffffffff800000"/>
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt"
+            line="964"
+            column="14"
+            startOffset="39065"
+            endLine="964"
+            endColumn="20"
+            endOffset="39071"/>
+        <map>
+            <entry
+                name="desc"
+                string="()"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.Collection#stream`"/>
+            <api-levels id="minSdk"
+                value="ffffffffffc00000"/>
+            <entry
+                name="name"
+                string="stream"/>
+            <entry
+                name="owner"
+                string="java.util.Collection"/>
+            <api-levels id="requiresApi"
+                value="ffffffffff800000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffffc00000" requiresApi="ffffffffff800000"/>
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt"
+            line="965"
+            column="14"
+            startOffset="39087"
+            endLine="965"
+            endColumn="20"
+            endOffset="39093"/>
+        <map>
+            <entry
+                name="desc"
+                string="(Ljava.util.function.Predicate;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.stream.Stream#filter`"/>
+            <api-levels id="minSdk"
+                value="ffffffffffc00000"/>
+            <entry
+                name="name"
+                string="filter"/>
+            <entry
+                name="owner"
+                string="java.util.stream.Stream"/>
+            <api-levels id="requiresApi"
+                value="ffffffffff800000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffffc00000" requiresApi="ffffffffff800000"/>
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt"
+            line="966"
+            column="14"
+            startOffset="39192"
+            endLine="966"
+            endColumn="23"
+            endOffset="39201"/>
+        <map>
+            <entry
+                name="desc"
+                string="()"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.stream.Stream#findFirst`"/>
+            <api-levels id="minSdk"
+                value="ffffffffffc00000"/>
+            <entry
+                name="name"
+                string="findFirst"/>
+            <entry
+                name="owner"
+                string="java.util.stream.Stream"/>
+            <api-levels id="requiresApi"
+                value="ffffffffff800000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffffc00000" requiresApi="ffffffffff800000"/>
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminal.kt"
+            line="967"
+            column="14"
+            startOffset="39217"
+            endLine="967"
+            endColumn="20"
+            endOffset="39223"/>
+        <map>
+            <entry
+                name="desc"
+                string="(Ljava.lang.Object;)"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.Optional#orElse`"/>
+            <api-levels id="minSdk"
+                value="ffffffffffc00000"/>
+            <entry
+                name="name"
+                string="orElse"/>
+            <entry
+                name="owner"
+                string="java.util.Optional"/>
+            <api-levels id="requiresApi"
+                value="ffffffffff800000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LongLogTag"
+        severity="error"
+        message="The logging tag can be at most 23 characters, was 29 (Capacitor:permission location)">
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="98"
+            column="19"
+            startOffset="3345"
+            endLine="98"
+            endColumn="50"
+            endOffset="3376"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LongLogTag"
+        severity="error"
+        message="The logging tag can be at most 23 characters, was 34 (Capacitor:permission bluetooth_old)">
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="110"
+            column="17"
+            startOffset="3819"
+            endLine="110"
+            endColumn="53"
+            endOffset="3855"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LongLogTag"
+        severity="error"
+        message="The logging tag can be at most 23 characters, was 30 (Capacitor:permission bluetooth)">
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="113"
+            column="19"
+            startOffset="3952"
+            endLine="113"
+            endColumn="51"
+            endOffset="3984"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LongLogTag"
+        severity="error"
+        message="The logging tag can be at most 23 characters, was 34 (Capacitor:permission bluetooth_old)">
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="135"
+            column="17"
+            startOffset="4920"
+            endLine="135"
+            endColumn="53"
+            endOffset="4956"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LongLogTag"
+        severity="error"
+        message="The logging tag can be at most 23 characters, was 30 (Capacitor:permission bluetooth)">
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="138"
+            column="19"
+            startOffset="5053"
+            endLine="138"
+            endColumn="51"
+            endOffset="5085"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 31">
+        <fix-replace
+            description="Delete @RequiresApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+                startOffset="558"
+                endOffset="599"/>
+        </fix-replace>
+        <location
+            file="${:*debug*MAIN*sourceProvider*0*javaDir*0}/com/getcapacitor/community/stripe/terminal/StripeTerminalPlugin.kt"
+            line="17"
+            column="1"
+            startOffset="558"
+            endLine="17"
+            endColumn="42"
+            endOffset="599"/>
+        <map>
+            <condition minGE="ffffffffc0000000"/>
+        </map>
+    </incident>
+
+</incidents>

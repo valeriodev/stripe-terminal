@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cots_amex_logo_description">Logo American Express</string>
+    <string name="cots_arrow_down_description">Saeth i lawr yn dangos y man tapio</string>
+    <string name="cots_arrow_up_description">Saeth i fyny yn dangos y man tapio</string>
+    <string name="cots_cancel_button_desc">Canslo trafodyn</string>
+    <string name="cots_card_not_supported">Dim modd delio â\'r cerdyn</string>
+    <string name="cots_declined">Cerdyn wedi\'i wrthod\nDefnyddiwch gerdyn arall</string>
+    <string name="cots_eftpos_logo_description">Logo EFTPOS</string>
+    <string name="cots_emv_symbol_description">Symbol taliad digyswllt EMV</string>
+    <string name="cots_error_symbol_description">Symbol methiant taliad digyswllt</string>
+    <string name="cots_irrecoverable_error">Gwall\nDefnyddiwch gerdyn arall</string>
+    <string name="cots_loading">Wrthi\'n prosesu</string>
+    <string name="cots_mastercard_logo_description">Logo Mastercard</string>
+    <string name="cots_pin_prompt">Rhowch y PIN</string>
+    <string name="cots_reader_not_active">Darllenydd ddim yn weithredol</string>
+    <string name="cots_reader_pin_required">Mae angen PIN</string>
+    <string name="cots_reading">Daliwch y cerdyn</string>
+    <string name="cots_recoverable_error">Gwall\nRhowch gynnig arall arni</string>
+    <string name="cots_see_phone">Gwiriwch y ffôn a rhoi cynnig arall arni</string>
+    <string name="cots_simulate_tap">Tapiwch i Efelychu Taliad</string>
+    <string name="cots_success">Tynnwch y cerdyn</string>
+    <string name="cots_success_symbol_description">Symbol tic taliad digyswllt</string>
+    <string name="cots_tap_above">Tapiwch uwchben y ddyfais</string>
+    <string name="cots_tap_behind">Tapiwch y tu ôl i\'r ddyfais</string>
+    <string name="cots_tap_below">Tapiwch o dan y ddyfais</string>
+    <string name="cots_tap_here">Tapiwch yma</string>
+    <string name="cots_total">Cyfanswm</string>
+    <string name="cots_visa_logo_description">Logo Visa</string>
+</resources>

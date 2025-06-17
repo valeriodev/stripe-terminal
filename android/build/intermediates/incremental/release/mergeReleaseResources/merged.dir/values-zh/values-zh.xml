@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cots_amex_logo_description">American Express 标识</string>
+    <string name="cots_arrow_down_description">向下箭头表示轻触部位</string>
+    <string name="cots_arrow_up_description">向上箭头表示轻触部位</string>
+    <string name="cots_cancel_button_desc">取消交易</string>
+    <string name="cots_card_not_supported">不支持此卡</string>
+    <string name="cots_declined">银行卡拒付\n请换一张卡</string>
+    <string name="cots_eftpos_logo_description">EFTPOS 徽标</string>
+    <string name="cots_emv_symbol_description">EMV - 非接触式符号</string>
+    <string name="cots_error_symbol_description">失败 - 非接触式符号</string>
+    <string name="cots_irrecoverable_error">错误\n请换一张卡</string>
+    <string name="cots_loading">处理中</string>
+    <string name="cots_mastercard_logo_description">Mastercard 标识</string>
+    <string name="cots_pin_prompt">输入 PIN</string>
+    <string name="cots_reader_not_active">读卡器未激活</string>
+    <string name="cots_reader_pin_required">PIN 为必填项</string>
+    <string name="cots_reading">将卡放于此处</string>
+    <string name="cots_recoverable_error">错误\n请重试</string>
+    <string name="cots_see_phone">查看手机并重试</string>
+    <string name="cots_simulate_tap">点击以模拟付款</string>
+    <string name="cots_success">移除卡</string>
+    <string name="cots_success_symbol_description">检查标志 - 非接触式符号</string>
+    <string name="cots_tap_above">轻触设备上方</string>
+    <string name="cots_tap_behind">轻触设备后面</string>
+    <string name="cots_tap_below">轻触设备下方</string>
+    <string name="cots_tap_here">轻触此处</string>
+    <string name="cots_total">合计</string>
+    <string name="cots_visa_logo_description">Visa 标识</string>
+</resources>

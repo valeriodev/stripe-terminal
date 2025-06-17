@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cots_amex_logo_description">Il-logo ta\' American Express</string>
+    <string name="cots_arrow_down_description">Il-vleġġa \'l isfel turi ż-żona li tista\' tmiss</string>
+    <string name="cots_arrow_up_description">Il-vleġġa \'l fuq turi ż-żona li tista\' tmiss</string>
+    <string name="cots_cancel_button_desc">Ikkanċella t-tranżazzjoni</string>
+    <string name="cots_card_not_supported">Il-karta mhix kompatibbli</string>
+    <string name="cots_declined">Il-karta nċaħdet. Jekk jogħġbok uża karta oħra.</string>
+    <string name="cots_eftpos_logo_description">Il-logo ta\' EFTPOS</string>
+    <string name="cots_emv_symbol_description">Is-simbolu tal-contactless EMV</string>
+    <string name="cots_error_symbol_description">Is-simbolu tal-contactless ma rnexxiex</string>
+    <string name="cots_irrecoverable_error">Żball\nJekk jogħġbok uża karta oħra</string>
+    <string name="cots_loading">Qed nipproċessaw</string>
+    <string name="cots_mastercard_logo_description">Il-logo ta\' Mastercard</string>
+    <string name="cots_pin_prompt">Daħħal il-PIN</string>
+    <string name="cots_reader_not_active">It-terminal mhux attiv</string>
+    <string name="cots_reader_pin_required">Il-PIN meħtieġ</string>
+    <string name="cots_reading">Żomm il-karta</string>
+    <string name="cots_recoverable_error">Żball\nErġa\' pprova</string>
+    <string name="cots_see_phone">Iċċekkja l-mowbajl u erġa\' pprova</string>
+    <string name="cots_simulate_tap">Miss għal Simulazzjoni ta\' Pagament</string>
+    <string name="cots_success">Neħħi l-karta</string>
+    <string name="cots_success_symbol_description">Il-marka li s-simbolu tal-contactless irnexxa</string>
+    <string name="cots_tap_above">Miss fuq mit-tagħmir</string>
+    <string name="cots_tap_behind">Miss wara t-tagħmir</string>
+    <string name="cots_tap_below">Miss taħt it-tagħmir</string>
+    <string name="cots_tap_here">Miss hawn</string>
+    <string name="cots_total">Total</string>
+    <string name="cots_visa_logo_description">Il-logo ta\' Visa</string>
+</resources>

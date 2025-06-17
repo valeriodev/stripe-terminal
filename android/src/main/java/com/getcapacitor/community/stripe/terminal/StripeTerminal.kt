@@ -765,6 +765,7 @@ class StripeTerminal(
                     JSObject().put("paymentIntent", JSONObject(trimmed))
                 } else {
                     // Altrimenti, lo serializziamo con Gson
+                    val gson = Gson()
                     val json = gson.toJson(paymentIntent)
                     JSObject().put("paymentIntent", JSONObject(json))
                 }
@@ -789,7 +790,7 @@ class StripeTerminal(
             }
             confirmPaymentIntentCall!!.reject(
                 e.localizedMessage,
-                null,
+                 "TERMINAL_ERROR",
                 returnObject
             )
         }

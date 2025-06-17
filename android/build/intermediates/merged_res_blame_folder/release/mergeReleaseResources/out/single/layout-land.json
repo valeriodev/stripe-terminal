@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/layout-land/material_timepicker.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/layout-land/material_clock_period_toggle_land.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-material-1.12.0-23:/layout-land/mtrl_picker_header_dialog.xml"
+    }
+]

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <!-- Contains all tap zone views for each state -->
+    <!-- Using tools since we programmatically set either set either layout_constraintWidth_percent for portrait
+         or layout_constraintHeight_percent for landscape.
+         This is the only difference between the XML for layouts & layouts-land, so this avoids extra landscape files -->
+    <include
+        android:id="@+id/tapZoneContainer"
+        layout="@layout/contactless_payment_fragment_tap_zone_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintHorizontal_bias="0"
+        tools:layout_constraintVertical_bias="0"
+        tools:layout_constraintWidth_max="0dp"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling" />
+
+    <ImageView
+        android:id="@+id/arrowDown"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginBottom="68dp"
+        android:contentDescription="@string/cots_arrow_down_description"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Loading spinner -->
+    <include
+        android:id="@+id/loadingSpinnerInclude"
+        layout="@layout/contactless_payment_fragment_loading_spinner"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@id/tapZoneText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintVertical_bias="@dimen/cots_default_tap_zone_vertical_position"
+        android:elevation="3dp"
+        tools:layout_constraintWidth_max="352dp"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:clipChildren="false" />
+
+    <!-- Tap zone state text -->
+    <TextView
+        android:id="@+id/tapZoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cots_tap_zone_text_margin"
+        android:fontFamily="@font/inter_semi_bold"
+        android:gravity="center"
+        android:text="@string/cots_tap_below"
+        android:textColor="@color/cots_text_primary"
+        android:textSize="@dimen/cots_tap_zone_text_size"
+        app:layout_constraintBottom_toTopOf="@id/arrowDown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Cancel transaction button -->
+    <include
+        android:id="@+id/cancelBox"
+        layout="@layout/contactless_payment_fragment_cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cots_large_margin"
+        app:layout_constraintBottom_toTopOf="@id/transactionInclude" />
+
+    <include
+        android:id="@+id/transactionInclude"
+        layout="@layout/contactless_payment_total_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/cots_large_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="@dimen/cots_total_height_scaling"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

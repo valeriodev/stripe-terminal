@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO(@chander)
+     Once we bump min API level to 26, we can use android: instead of app:
+     Also get rid of the v26 support library once we bump.
+-->
+<!-- Inter is available at https://rsms.me/inter/ -->
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+         100	Thin	FontStyle#FONT_WEIGHT_THIN
+         200	Extra Light (Ultra Light)	FontStyle#FONT_WEIGHT_EXTRA_LIGHT
+         300	Light	FontStyle#FONT_WEIGHT_LIGHT
+         400	Normal (Regular)	FontStyle#FONT_WEIGHT_NORMAL
+         500	Medium	FontStyle#FONT_WEIGHT_MEDIUM
+         600	Semi Bold (Demi Bold)	FontStyle#FONT_WEIGHT_SEMI_BOLD
+         700	Bold	FontStyle#FONT_WEIGHT_BOLD
+         800	Extra Bold (Ultra Bold)	FontStyle#FONT_WEIGHT_EXTRA_BOLD
+         900	Black (Heavy)
+         From https://developer.android.com/reference/android/graphics/fonts/FontStyle
+    -->
+
+    <!-- Normal font styles -->
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/inter_regular" />
+
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="600"
+        app:font="@font/inter_semi_bold" />
+
+</font-family>

@@ -1,0 +1,24 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:1:1-5:12
+INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:1:1-5:12
+	package
+		INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:3:5-79
+	android:name
+		ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:3:22-76
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:4:5-76
+	android:name
+		ADDED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml:4:22-73
+uses-sdk
+INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml
+INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/valerio/Flazio/Altro/stripe-terminal/android/src/main/AndroidManifest.xml

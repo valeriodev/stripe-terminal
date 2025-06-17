@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:id="@+id/transactionInclude"
+    >
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:fontFamily="@font/inter_semi_bold"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/cots_text_secondary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        app:layout_constraintHeight_percent=".2"
+        android:autoSizeTextType="uniform"
+        android:text="@string/cots_total"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:fontFamily="@font/inter_semi_bold"
+        android:letterSpacing="-0.06"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        app:layout_constraintHeight_percent=".8"
+        app:layout_constraintTop_toTopOf="@id/totalTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:autoSizeMaxTextSize="160sp"
+        tools:text="$36.20"
+        android:paddingBottom="6dp"
+        android:textColor="@color/cots_text_primary"
+        />
+
+    <!-- Card Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/bottomCancel" >
+
+        <ImageView
+            android:id="@+id/visaImageView"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cots_visa_logo_description"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_visa_detailed"
+            />
+
+        <ImageView
+            android:id="@+id/mastercardImageView"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/cots_mastercard_logo_description"
+            android:src="@drawable/ic_mc"
+            />
+
+        <ImageView
+            android:id="@+id/amexImageView"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/cots_amex_logo_description"
+            android:src="@drawable/ic_amex" />
+
+        <ImageView
+            android:id="@+id/eftposImageView"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/cots_eftpos_logo_description"
+            android:src="@drawable/ic_eftpos" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

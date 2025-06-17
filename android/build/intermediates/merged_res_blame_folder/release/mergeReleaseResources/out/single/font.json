@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/font/inter.xml",
+        "source": "com.getcapacitor.community.stripe.terminal-stripeterminal-taptopay-4.3.0-37:/font/inter.xml"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/font/inter_regular.otf",
+        "source": "com.getcapacitor.community.stripe.terminal-stripeterminal-taptopay-4.3.0-37:/font/inter_regular.otf"
+    },
+    {
+        "merged": "com.getcapacitor.community.stripe.terminal-release-51:/font/inter_semi_bold.otf",
+        "source": "com.getcapacitor.community.stripe.terminal-stripeterminal-taptopay-4.3.0-37:/font/inter_semi_bold.otf"
+    }
+]

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false">
+
+    <!-- Contains all tap zone views for each state -->
+    <!-- Using tools since we programmatically set either set either layout_constraintWidth_percent for portrait
+         or layout_constraintHeight_percent for landscape.
+         This is the only difference between the XML for layouts & layouts-land, so this avoids extra landscape files -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tapZoneContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintVertical_bias="@dimen/cots_default_tap_zone_vertical_position"
+        android:elevation="3dp"
+        tools:layout_constraintWidth_max="352dp"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:clipChildren="false" >
+
+        <!-- Reading zone -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tapZoneBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+            android:elevation="8dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="0dp" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_nfc_tap_here"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintVertical_bias=".7"
+                app:layout_constraintHorizontal_bias=".7"
+                app:layout_constraintWidth_percent=".7"
+                app:tint="@color/cots_text_primary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="@string/cots_tap_behind" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Success zone -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/successBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintVertical_bias=".7"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintWidth_percent=".8"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_circle" >
+
+            <ImageView
+                android:id="@+id/successCheckmark"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:src="@drawable/ic_check"
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/cots_checkmark_green"
+                android:contentDescription="@string/cots_tap_behind" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Error zone -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/errorBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintVertical_bias=".65"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".39" >
+
+            <ImageView
+                android:id="@+id/errorIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_warning"
+                android:contentDescription="@string/cots_tap_behind" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/tapPulse"
+        android:padding="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_circle"
+        android:backgroundTint="@color/cots_tap_zone_primary"
+        android:alpha=".3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/tapZoneContainer"
+        app:layout_constraintRight_toRightOf="@id/tapZoneContainer"
+        app:layout_constraintTop_toTopOf="@id/tapZoneContainer"
+        app:layout_constraintBottom_toBottomOf="@id/tapZoneContainer"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:outlineProvider="none"
+        android:elevation="0dp" />
+
+    <!-- Loading spinner -->
+    <include
+        android:id="@+id/loadingSpinnerInclude"
+        layout="@layout/contactless_payment_fragment_loading_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/tapZoneContainer"
+        app:layout_constraintRight_toRightOf="@id/tapZoneContainer"
+        app:layout_constraintTop_toTopOf="@id/tapZoneContainer"
+        app:layout_constraintBottom_toBottomOf="@id/tapZoneContainer"
+        tools:layout_constraintVertical_bias="@dimen/cots_default_tap_zone_vertical_position"
+        android:elevation="3dp"
+        tools:layout_constraintWidth_max="352dp"
+        tools:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling"
+        android:clipChildren="false" />
+
+    <!-- Tap zone state text -->
+    <TextView
+        android:id="@+id/tapZoneText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semi_bold"
+        android:gravity="center"
+        android:text="@string/cots_tap_behind"
+        android:textSize="@dimen/cots_tap_zone_text_size"
+        android:textColor="@color/cots_text_primary"
+        app:layout_constraintLeft_toLeftOf="@id/tapZoneContainer"
+        app:layout_constraintRight_toRightOf="@id/tapZoneContainer"
+        app:layout_constraintTop_toBottomOf="@id/tapZoneContainer"
+        app:layout_constraintWidth_percent="@dimen/cots_tap_zone_scaling" />
+
+    <!-- Cancel transaction button -->
+    <include
+        layout="@layout/contactless_payment_fragment_cancel_button"
+        android:id="@+id/cancelBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/transactionInclude"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Total cost & cards -->
+    <include
+        android:id="@+id/transactionInclude"
+        layout="@layout/contactless_payment_total_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHeight_percent="@dimen/cots_total_height_scaling"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Added into default to so ProxyViewBinding has something to reference for components that should be
+    invisible/nonexistent for the Default screen.
+    In Default since we do not animate some views (tap zone expanding) we will just animate an invisible dummy view -->
+    <View
+        android:id="@+id/ignoredForDefault"
+        android:background="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:alpha="0"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
